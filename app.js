@@ -1,4 +1,7 @@
+function slidesPluggin(activeSlide=0){
 const slides = document.querySelectorAll('.slide')
+
+  slides[activeSlide].classList.add('active')
 
 for (const slide of slides) {
     slide.addEventListener('click', () => {
@@ -13,6 +16,10 @@ function clearActiveClasses() {
     })
 
 }
+
+}
+
+slidesPluggin (4)
 
 function changeColor(colorValue) {
     document.body.style.background =     document.getElementById(colorValue).dataset.color;
